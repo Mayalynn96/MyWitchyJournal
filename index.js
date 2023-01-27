@@ -1,5 +1,4 @@
 const express = require('express');
-const { get } = require('http');
 const path = require('path')
 const tarotCardsData = require('./db/tarotCards.json');
 
@@ -16,19 +15,16 @@ app.get('/TarotCards', (req, res) => {
   res.sendFile(path.join(__dirname, './views/allCards.html'));
 });
 
-app.get('/api/all_tarot_cards', (req, res)=>{
+app.get('/api/tarotcards', (req, res)=>{
     res.json(tarotCardsData)
 })
 
-app.get('/api/all_tarot_cards/:cardName', (req, res)=>{
+app.get('/api/tarotcards/allcards/:cardName', (req, res)=>{
     for (let i = 0; i < tarotCardsData.length; i++) {
         const card = tarotCardsData[i];
-        console.log(req.params);
         const cardArr = (card.cardName).split(' ');
-        console.log(cardArr);
         const reqArr = (req.params.cardName).split(' ');
         const cards = cardArr.join('');
-        console.log(card);
         const reqParams = reqArr.join('');
         if(cards.toLocaleLowerCase()==reqParams.toLocaleLowerCase()){
             return res.json(card)
@@ -36,6 +32,11 @@ app.get('/api/all_tarot_cards/:cardName', (req, res)=>{
     }
     return res.send("No such card")
 })
+
+app.get('/api/tarotcards/randomcard', (req, res) => {
+    const randomNum = Math.floor(Math.random()*tarotCardsData.length)
+    res.json(tarotCardsData[randomNum])
+});
 
 app.listen(PORT, () => {
     console.log(`Server listening at http://localhost:3000`)
