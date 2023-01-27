@@ -1,0 +1,24 @@
+[
+    {
+        "cardName": "The Fool",
+        "cardNumber": 0,
+        "description": "The Fool is numbered 0, the number of unlimited potential, and so does not have a specific place in the sequence of the Tarot cards. The Fool can be placed either at the beginning of the Major Arcana or at the end. The Major Arcana is often considered The Fools journey through life and as such, he is ever present and therefore needs no number.. He symbolises naivety and eagerness to learn more.",
+        "imgSrc": "url(./assets/images/tarotCards/majorArcana/00TheFool.png)",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Magician",
+        "cardNumber": 1,
+        "description": "The Magician card is numbered One, the number of new beginnings and opportunities, and associates with the planet of Mercury. He stands with one arm stretched upwards towards the Universe, and the other pointing down to the earth. His positioning represents his connection between the spiritual realms and the material realms.",
+        "imgSrc": "url(./assets/images/tarotCards/majorArcana/01TheMagician.png)",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "Ace of Cups",
+        "cardNumber": 23,
+        "description": "The Ace of Cups shows a chalice overflowing with five streams of water. The cup represents the vessel of your subconscious mind; the five streams are your five senses and the abundant emotion and intuition flowing from within you.",
+        "imgSrc": "url(https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg)",
+        "arcana": "Minor Arcana",
+        "suit": "Cups"
+    }
+]
