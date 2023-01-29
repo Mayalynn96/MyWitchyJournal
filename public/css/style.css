@@ -1,5 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: antiquewhite;
+    background-color: #7E7F9A;
+    font-family: 'Amatic SC', cursive;
+    color: #A4508B;
+}
+
+header{
+    display: flex;
+    background-color: #272838;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 100px;
+}
+
+header h1{
+    font-size: 70px;
+    padding: 5px;
+    width: 65%;
+}
+
+header div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 35%;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #A4508B;
+}
+
+main {
+    padding-top: 100px;
+    color: #F9B9B7;
+    text-align: center;
+}
+
+h2{
+    font-size: 60px;
+}
+
+h3{
+    font-size: 50px;
+}
+
+#indexRandom{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#indexRandom div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #F3DE8A;
+    width: 40%;
+}
+
+#randomCard{
+    height: 500px;
+}
+
+main p{
+    padding: 5px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(189, 117, 200);
+}
+
+@media screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+        height: 32vw;
+    }
+
+    header h1, header div{
+        width: 100%;
+    }
+
+    header h1{
+        font-size: 15vw;
+    }
+
+    header div{
+        font-size: 6vw;
+    }
+
+    main{
+        padding-top: 32vw;
+    }
+
+    #indexRandom{
+        flex-direction: column;
+        align-items: center;
+    }
+    #randomCard{
+        width: 50%;
+        height: auto;
+    }
+    #indexRandom div{
+        width: 80%;
+        margin-top: 5px;
+    }
 }
