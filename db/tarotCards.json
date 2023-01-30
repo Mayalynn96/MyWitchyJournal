@@ -14,11 +14,94 @@
         "arcana": "Major Arcana"
     },
     {
-        "cardName": "Ace of Cups",
-        "cardNumber": 23,
-        "description": "The Ace of Cups shows a chalice overflowing with five streams of water. The cup represents the vessel of your subconscious mind; the five streams are your five senses and the abundant emotion and intuition flowing from within you.",
-        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg",
-        "arcana": "Minor Arcana",
-        "suit": "Cups"
+        "cardName": "The High Priestess",
+        "cardNumber": 2,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/02TheHighPriestess.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Empress",
+        "cardNumber": 3,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/03TheEmpress.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Emperor",
+        "cardNumber": 4,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/04TheEmperor.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Hierophant",
+        "cardNumber": 5,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/05TheHierophant.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Lovers",
+        "cardNumber": 6,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/06TheLovers.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Chariot",
+        "cardNumber": 7,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/07TheChariot.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "Strength",
+        "cardNumber": 8,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/08Strength.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Hermit",
+        "cardNumber": 9,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/09TheHermit.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "Wheel Of Fortune",
+        "cardNumber": 10,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/10WeelOfFortune.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "Justice",
+        "cardNumber": 11,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/11Justice.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "The Hanged Man",
+        "cardNumber": 12,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/12TheHangedMan.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "Death",
+        "cardNumber": 13,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/13Death.png",
+        "arcana": "Major Arcana"
+    },
+    {
+        "cardName": "Temperance",
+        "cardNumber": 14,
+        "description": "...",
+        "imgSrc": "images/tarotCards/majorArcana/14Temperance.png",
+        "arcana": "Major Arcana"
     }
 ]
