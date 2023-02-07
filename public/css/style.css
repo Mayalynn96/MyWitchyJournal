@@ -65,7 +65,7 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    color: #F3DE8A;
+    color: rgba(255, 255, 255, 0.471);
     width: 40%;
     margin-left: 10px;
 }
