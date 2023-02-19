@@ -7,6 +7,10 @@ Image.init({
     src:{
         type: DataTypes.STRING,
         allowNull:false
+    },
+    artist:{
+        type: DataTypes.STRING,
+        allowNull:false
     }
 },{
     sequelize

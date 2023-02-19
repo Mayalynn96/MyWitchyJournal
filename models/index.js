@@ -22,6 +22,17 @@ Meaning.belongsTo(Card);
 User.hasMany(Meaning);
 Meaning.belongsTo(User);
 
+User.hasMany(Deck);
+Deck.belongsTo(User);
+
+Deck.hasMany(Image);
+Image.belongsTo(Deck);
+
+Deck.hasMany(Reading);
+Reading.belongsTo(Deck);
+
+Image.hasOne(Card);
+Card.hasMany(Image);
 
 module.exports = {
     User,

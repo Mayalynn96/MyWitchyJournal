@@ -6,7 +6,16 @@ class Deck extends Model{}
 Deck.init({
     name:{
         type: DataTypes.STRING,
-        allowNull:false
+        allowNull:false,
+        unique:true
+    },
+    description:{
+        type: DataTypes.STRING,
+        allowNull:true
+    },
+    isPrivate:{
+        type: DataTypes.BOOLEAN,
+        defaultValue:false
     }
 },{
     sequelize

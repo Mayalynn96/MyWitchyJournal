@@ -22,6 +22,13 @@ router.use("/api/Keywords",KeywordRoutes);
 const meaningRoutes = require("./meaningController")
 router.use("/api/meanings",meaningRoutes);
 
+const deckRoutes = require("./deckController")
+router.use("/api/decks",deckRoutes);
+
+const imageRoutes = require("./imageController")
+router.use("/api/images",imageRoutes);
+
+
 const tarotCardsRoutes = require("./tarotCardsController");
 router.use("/api/tarotCards",tarotCardsRoutes);
 
