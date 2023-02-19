@@ -4,10 +4,14 @@ const sequelize = require("../config/connection");
 class Keyword extends Model{}
 
 Keyword.init({
-    name:{
+    word:{
         type: DataTypes.STRING,
         allowNull:false,
         unique:true
+    },
+    forUpright:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
     }
 },{
     sequelize
