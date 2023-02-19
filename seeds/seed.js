@@ -37,7 +37,7 @@ const seed = async () => {
             "suit": null
         },
         {
-            "cardName": "The Emperor",
+            "cardName": "The Empress",
             "cardNumber": 3,
             "arcana": "Major",
             "suit": null
@@ -101,9 +101,21 @@ const seed = async () => {
             "DeckId": 2,
         },
         {
-            "src": "./images/tarotCards/majorArcana/00TheMagician.png",
+            "src": "./images/tarotCards/majorArcana/01TheMagician.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 2,
+            "DeckId": 2,
+        },
+        {
+            "src": "./images/tarotCards/majorArcana/02TheHighPriestess.png",
+            "artist": "Maya Lynn Cohen",
+            "CardId": 3,
+            "DeckId": 2,
+        },
+        {
+            "src": "./images/tarotCards/majorArcana/03TheEmpress.png",
+            "artist": "Maya Lynn Cohen",
+            "CardId": 4,
             "DeckId": 2,
         }
     ],{

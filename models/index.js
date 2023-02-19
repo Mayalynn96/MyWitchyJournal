@@ -26,12 +26,14 @@ User.hasMany(Deck);
 Deck.belongsTo(User);
 
 Deck.hasMany(Image);
-Image.belongsTo(Deck);
+Image.belongsTo(Deck, {
+    onDelete:"cascade"
+});
 
 Deck.hasMany(Reading);
 Reading.belongsTo(Deck);
 
-Image.hasOne(Card);
+Image.belongsTo(Card);
 Card.hasMany(Image);
 
 module.exports = {

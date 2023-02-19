@@ -51,7 +51,7 @@ app.get("/sessions",(req,res)=>{
     res.json(req.session)
 })
 
-sequelize.sync({forse:true}).then(function(){
+sequelize.sync({forse:false}).then(function(){
     app.listen(PORT, () => {
         console.log(`Server listening at http://localhost:${PORT}`)
     });
