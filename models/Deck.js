@@ -1,20 +1,24 @@
 const {Model, DataTypes} = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Keyword extends Model{}
+class Deck extends Model{}
 
-Keyword.init({
-    word:{
+Deck.init({
+    name:{
         type: DataTypes.STRING,
         allowNull:false,
         unique:true
     },
-    forUpright:{
+    description:{
+        type: DataTypes.STRING,
+        allowNull:true
+    },
+    isPrivate:{
         type: DataTypes.BOOLEAN,
-        defaultValue: true
+        defaultValue:false
     }
 },{
     sequelize
 });
 
-module.exports=Keyword
+module.exports=Deck

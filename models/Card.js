@@ -4,12 +4,12 @@ const sequelize = require("../config/connection");
 class Card extends Model{}
 
 Card.init({
-    card_name:{
+    cardName:{
         type: DataTypes.STRING,
         allowNull:false,
         unique:true
     },
-    card_number:{
+    cardNumber:{
         type: DataTypes.INTEGER,
         allowNull:false,
         unique:true
@@ -25,9 +25,6 @@ Card.init({
         validate: {
             isIn:[['Cups','Pentacles','Swords','Wands',null]]
         }
-    },
-    reversed:{
-        type: DataTypes.BOOLEAN
     }
 },{
     sequelize

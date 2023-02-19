@@ -1,9 +1,49 @@
 const express = require('express');
 const router = express.Router();
-const Card = require('../models/Card');
+const {
+    User,
+    Card,
+    Keyword,
+    Meaning,
+    Image,
+    Reading,
+    Deck,
+    Theme,
+    Position,
+    Person,
+    PersonInReading,
+    KeywordConnector
+} = require('../models')
 
 router.get("/", (req, res) => {
     Card.findAll().then(data => {
+        res.json(data)
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({
+            msg: "an error occurred",
+            err: err
+        })
+    })
+})
+
+router.get("/keywordsAndCards", (req, res) => {
+    Card.findAll({
+        include: [
+            {
+                model: Keyword,
+                where: {
+                    userId: req.session.userId
+                }
+            },
+            {
+                model: Meaning,
+                where: {
+                    userId: req.session.userId
+                }
+            }
+        ]
+    }).then(data => {
         res.json(data)
     }).catch(err => {
         console.log(err);

@@ -16,7 +16,9 @@ const {
 } = require('../models')
 
 router.get("/", (req, res) => {
-    Keyword.findAll().then(data => {
+    Deck.findAll({
+        include:[Image]
+    }).then(data => {
         res.json(data)
     }).catch(err => {
         console.log(err);
@@ -28,37 +30,45 @@ router.get("/", (req, res) => {
 })
 
 router.get("/:id", (req, res) => {
-    Keyword.findByPk(req.params.id).then(data => {
+    Deck.findByPk(req.params.id).then(data => {
         if (data) {
             return res.json(data)
         } else {
-            res.status(404).send("No such Keyword")
-        }
-    })
-})
-
-router.get("/Keyword/:word", (req, res) => {
-    Keyword.findOne({ where: { word: req.params.word } }).then(data => {
-        if (data) {
-            return res.json(data)
-        } else {
-            res.status(404).send("No such Keyword!")
+            res.status(404).send("No such Deck")
         }
     })
 })
 
 router.post("/", (req, res) => {
-    Keyword.create({
-        word: req.body.word,
-        forUpright: req.body.forUpright,
-        CardId: req.body.CardId,
-        UserId: req.session.userId
+    Deck.create({
+        name:req.body.name,
+        description:req.body.description,
+        isPrivate:req.body.isPrivate,
+        UserId:req.session.userId
     }).then(data => {
-        return res.status(201).send("Keyword added!")
+        return res.status(201).send("Deck added!")
     }).catch(err => {
         console.log(err);
         return res.status(500).send("Something went wrong...")
     })
+})
+
+router.delete("/:id", (req, res) => {
+    Deck.destroy({
+       where: {
+        id: req.params.id
+       } 
+    }).then((dbPostData) => {
+        if (!dbPostData) {
+          res.status(404).json({ message: "No deck found with this id" });
+          return;
+        }
+        res.json(dbPostData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
 })
 
 module.exports = router;

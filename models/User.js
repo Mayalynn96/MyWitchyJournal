@@ -5,8 +5,16 @@ const bcrypt = require("bcrypt");
 class User extends Model{}
 
 User.init({
+    firstName:{
+        type: DataTypes.STRING,
+        allowNull:true
+    },
+    lastName:{
+        type: DataTypes.STRING,
+        allowNull:true
+    },
     username:{
-        type: DataTypes.STRING(25),
+        type: DataTypes.STRING,
         allowNull:false,
         unique:true
     },
@@ -23,6 +31,14 @@ User.init({
         validate: {
             len: [8,20]
         }
+    },
+    birthDateAndTime: {
+        type: DataTypes.DATE,
+        allowNull:true
+    },
+    isAdmin: {
+        type: DataTypes.BOOLEAN,
+        defaultValue:false
     }
 },{
     sequelize,

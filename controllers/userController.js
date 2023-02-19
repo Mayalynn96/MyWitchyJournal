@@ -1,6 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
+
+const {
+    User,
+    Card,
+    Keyword,
+    Meaning,
+    Image,
+    Reading,
+    Deck,
+    Theme,
+    Position,
+    Person,
+    PersonInReading,
+    KeywordConnector
+} = require('../models')
+
 const bcrypt = require("bcrypt");
 const { Op } = require("sequelize");
 
@@ -14,6 +29,11 @@ router.get("/", (req, res) => {
             err: err
         })
     })
+})
+
+router.get("/logout", (req,res) => {
+    req.session.destroy();
+    res.redirect("/sessions");
 })
 
 router.get("/:id", (req, res) => {
@@ -58,6 +78,9 @@ router.post("/login", (req, res) => {
             return res.status(404).json({ msg: "no such user!" })
         } else {
             if (bcrypt.compareSync(req.body.password, userData.password)) {
+                req.session.userId = userData.id
+                req.session.userEmail = userData.email
+                req.session.userUsername = userData.username
                 return res.json(userData)
             } else {
                 return res.status(401).json({ msg: "wrong password" })
