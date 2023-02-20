@@ -611,6 +611,12 @@ const seed = async () => {
             "DeckId": 1,
         },
         {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+            "artist": "A.E. Waite and Pamela Colman Smith",
+            "CardId": 15,
+            "DeckId": 1,
+        },
+        {
             "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/00TheFool.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 1,
