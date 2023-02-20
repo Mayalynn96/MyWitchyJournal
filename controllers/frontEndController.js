@@ -31,32 +31,29 @@ router.get("/home", (req,res) => {
         const hbsCards = deckData.map((Card) => Card.toJSON());
         const randomCard = hbsCards[Math.floor(Math.random()*hbsCards.length)]
         res.render("home", {
-            randomCard
+            randomCard,
+            isSignedIn:req.session.userId
         })
     })
 })
 
-router.get("/tarotCards", (req,res) => {
+router.get("/login", (req,res) => {
+    res.render("login", {layout:"loginMain"})
+})
+
+router.get("/tarotCards/deck/:id", (req,res) => {
     Card.findAll({
         include: {
             model:Image,
             where:{
-                DeckId: 2
+                DeckId: req.params.id
             }
         }
     }).then(deckData => {
         const hbsCards = deckData.map((Card) => Card.toJSON());
-        const side = []
-        for(let i = 0; i < hbsCards; i++){
-            if(i%2===0){
-                side.push("even")
-            } else {
-                side.push("odd")
-            }
-        }
         res.render("allCards", {
             allCards:hbsCards,
-            order:side
+            isSignedIn:req.session.userId
         })
     })
 })

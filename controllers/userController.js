@@ -33,7 +33,7 @@ router.get("/", (req, res) => {
 
 router.get("/logout", (req,res) => {
     req.session.destroy();
-    res.redirect("/sessions");
+    res.redirect("/login");
 })
 
 router.get("/:id", (req, res) => {

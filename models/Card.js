@@ -10,9 +10,8 @@ Card.init({
         unique:true
     },
     cardNumber:{
-        type: DataTypes.INTEGER,
-        allowNull:false,
-        unique:true
+        type: DataTypes.STRING,
+        allowNull:false
     },
     arcana:{
         type: DataTypes.STRING,
