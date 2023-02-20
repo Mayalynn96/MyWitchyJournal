@@ -27,20 +27,22 @@ router.get("/", (req, res) => {
     })
 })
 
-router.get("/keywordsAndCards", (req, res) => {
+router.get("/userCards", (req, res) => {
     Card.findAll({
         include: [
             {
                 model: Keyword,
                 where: {
                     userId: req.session.userId
-                }
+                },
+                required:false
             },
             {
                 model: Meaning,
                 where: {
                     userId: req.session.userId
-                }
+                },
+                required:false
             }
         ]
     }).then(data => {

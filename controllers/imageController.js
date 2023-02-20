@@ -37,6 +37,22 @@ router.get("/:id", (req, res) => {
     })
 })
 
+router.put("/:id", (req, res) => {
+    Image.update({
+        src:req.body.src
+    },{
+        where:{
+            id:req.params.id
+        }
+    }).then(data => {
+        if (data) {
+            return res.json(data)
+        } else {
+            res.status(404).send("No such Image")
+        }
+    })
+})
+
 router.post("/", (req, res) => {
     Image.create({
         src:req.body.src,

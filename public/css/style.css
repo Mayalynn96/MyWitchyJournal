@@ -1,3 +1,11 @@
+:root {
+    --background: #685762;
+    --lightText: #D6EFFF;
+    --middleText: #EFA9AE;
+    --dark: #190B28;
+  }
+  
+
 *{
     margin: 0;
     padding: 0;
@@ -5,14 +13,14 @@
 }
 
 body{
-    background-color: #7E7F9A;
+    background-color: var(--background);
     font-family: 'Amatic SC', cursive;
-    color: #A4508B;
+    color: var(--middleText);
 }
 
 header{
     display: flex;
-    background-color: #272838;
+    background-color: var(--dark);
     width: 100%;
     position: fixed;
     justify-content: space-between;
@@ -38,12 +46,12 @@ header div{
 
 a{
     text-decoration: none;
-    color: #A4508B;
+    color: var(--middleText);
 }
 
 main {
     padding-top: 100px;
-    color: #F9B9B7;
+    color: var(--middleText);
     text-align: center;
 }
 
@@ -65,7 +73,7 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    color: rgba(255, 255, 255, 0.471);
+    color: var(--lightText);
     width: 40%;
     margin-left: 10px;
 }
@@ -82,7 +90,58 @@ main p{
 
 img{
     border-radius: 10px;
-    box-shadow: 5px 5px 5px#272838;
+    box-shadow: 5px 5px 5px var(--dark);
+}
+#allCards {
+    width: 80%;
+    margin: auto;
+    list-style: none;
+}
+
+#allCards li div{
+ display: flex;
+ padding: 5px;
+}
+
+.odd{
+    flex-direction: row-reverse;
+}
+
+#allCards h3{
+    height: 100%;
+    margin: 10px;
+}
+
+#allCards img {
+    height: 500px;
+}
+
+#loginCard{
+    background-color: var(--dark);
+}
+
+#loginCard h1{
+    font-size: 60px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25vh;
+    justify-content: space-evenly;
+}
+
+#loginForm input {
+    font-size: 20px;
+}
+
+#loginCard button{
+    width: 170px;
+    font-size: 20px;
+    padding: 0.5%;
+    margin: 1%;
+    color: var(--dark);
 }
 
 @media screen and (max-width: 700px) {
@@ -119,5 +178,13 @@ img{
     #indexRandom div{
         width: 80%;
         margin-top: 5px;
+    }
+    #allCards h3{
+        font-size: 5vw;
+    }
+    
+    #allCards img {
+        width: 60vw;
+        height: auto;
     }
 }

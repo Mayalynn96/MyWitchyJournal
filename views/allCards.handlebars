@@ -1,0 +1,25 @@
+
+<h1>See all my cards so far!</h1>
+<ul id="allCards">
+    {{#each allCards}}
+<li>
+    <div class="allCardsCard">
+    {{#each Images}}
+    <img id="randomCard" src="{{src}}" alt="image of card">
+    {{/each}}
+    <h3>{{cardName}}</h3>
+</div>
+</li>
+{{/each}}
+</ul>
+
+<script>
+    const allCards = document.querySelectorAll(".allCardsCard")
+for(let i = 0; i < allCards.length; i++){
+    if(i%2==0){
+        allCards[i].classList.add('even')
+    } else {
+        allCards[i].classList.add('odd')
+    }
+}
+</script>
