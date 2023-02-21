@@ -617,6 +617,36 @@ const seed = async () => {
             "DeckId": 1,
         },
         {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+            "artist": "A.E. Waite and Pamela Colman Smith",
+            "CardId": 16,
+            "DeckId": 1,
+        },
+        {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
+            "artist": "A.E. Waite and Pamela Colman Smith",
+            "CardId": 17,
+            "DeckId": 1,
+        },
+        {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+            "artist": "A.E. Waite and Pamela Colman Smith",
+            "CardId": 18,
+            "DeckId": 1,
+        },
+        {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
+            "artist": "A.E. Waite and Pamela Colman Smith",
+            "CardId": 19,
+            "DeckId": 1,
+        },
+        {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg",
+            "artist": "A.E. Waite and Pamela Colman Smith",
+            "CardId": 20,
+            "DeckId": 1,
+        },
+        {
             "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/00TheFool.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 1,
@@ -704,6 +734,36 @@ const seed = async () => {
             "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/14Temperance.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 15,
+            "DeckId": 2,
+        },
+        {
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/15TheDevil.png",
+            "artist": "Maya Lynn Cohen",
+            "CardId": 16,
+            "DeckId": 2,
+        },
+        {
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/16TheTower.png",
+            "artist": "Maya Lynn Cohen",
+            "CardId": 17,
+            "DeckId": 2,
+        },
+        {
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/17TheStar.png",
+            "artist": "Maya Lynn Cohen",
+            "CardId": 18,
+            "DeckId": 2,
+        },
+        {
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/18TheMoon.png",
+            "artist": "Maya Lynn Cohen",
+            "CardId": 19,
+            "DeckId": 2,
+        },
+        {
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/19TheSun.png",
+            "artist": "Maya Lynn Cohen",
+            "CardId": 20,
             "DeckId": 2,
         }
     ],{
