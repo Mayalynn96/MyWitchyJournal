@@ -41,12 +41,12 @@ router.get("/login", (req,res) => {
     res.render("login", {layout:"loginMain"})
 })
 
-router.get("/tarotCards/deck/:id", (req,res) => {
+router.get("/tarotCards/deck", (req,res) => {
     Card.findAll({
         include: {
             model:Image,
             where:{
-                DeckId: req.params.id
+                DeckId: +req.query?.id
             }
         }
     }).then(deckData => {
