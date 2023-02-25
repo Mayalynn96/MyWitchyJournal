@@ -1,8 +1,6 @@
 <h2>Welcome!</h2>
 <div id="indexRandom">
-    {{#each randomCard.Images}}
-    <img id="randomCard" src="{{src}}" alt="image of card">
-    {{/each}}
+    <img class="randomCard" src="{{cardSrc}}" alt="Card {{randomeCard.cardNumber}}: {{randomeCard.cardName}}">
     <div>
         <h3 id="randomCardTitle">{{randomCard.cardName}}</h3>
         <p>Hello, my name is Maya and I'm a big fan of all things witchy! I have been dabbling in tarot card readings

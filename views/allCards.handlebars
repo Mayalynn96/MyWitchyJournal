@@ -1,12 +1,10 @@
 
-<h1>See all my cards so far!</h1>
+<h2>See all my cards so far!</h2>
 <ul id="allCards">
     {{#each allCards}}
     <li>
         <div class="allCardsCard">
-            {{#each Images}}
-            <img class="randomCard" src="{{src}}" alt="image of card">
-            {{/each}}
+            <img class="randomCard" src="{{Images.0.src}}" alt="Card {{cardNumber}}: {{cardName}}">
             <h3>{{cardName}}</h3>
         </div>
     </li>

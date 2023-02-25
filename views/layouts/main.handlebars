@@ -23,17 +23,17 @@
             <div id="searchBar">
                 <label for="searchInput">search</label>
                 <i id="navSearch" class="uil uil-search"></i>
-                <input id="searchInput" class="hidden" name="searchInput" type="text" placeholder="Search for a perticular card">
+                <input id="searchInput" class="hidden" name="searchInput" type="text" placeholder="Search">
                 <button id="searchBtn" class="hidden" type="button" >Search</button>
             </div>
             <div id="more">
-                <a href="#">
-                <i class="uil uil-user-circle"></i>
+                <a href="/profile">
+                <i class="uil uil-user-circle"><h2>Profile</h2></i>
                 </a>
                 <a href="/home">
-                <i id="home" class="uil uil-home"></i>
+                <i id="home" class="uil uil-home"><h2>home</h2></i>
                 </a>
-                <i id="moreI" class="uil uil-bars"></i>
+                <i id="moreI" class="uil uil-bars"><h2>more</h2></i>
                 <div id="navMore">
                     <a href="/TarotCards/deck/?id=2">Tarot Cards</a>
                     {{#if isSignedIn}}

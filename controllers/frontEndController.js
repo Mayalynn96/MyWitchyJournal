@@ -29,9 +29,11 @@ router.get("/home", (req,res) => {
         }
     }).then(deckData => {
         const hbsCards = deckData.map((Card) => Card.toJSON());
-        const randomCard = hbsCards[Math.floor(Math.random()*hbsCards.length)]
+        const randomCard = hbsCards[Math.floor(Math.random()*hbsCards.length)];
+        const cardSrc = randomCard.Images[0].src;
         res.render("home", {
             randomCard,
+            cardSrc,
             isSignedIn:req.session.userId
         })
     })
@@ -56,6 +58,20 @@ router.get("/tarotCards/deck", (req,res) => {
             isSignedIn:req.session.userId
         })
     })
+})
+
+router.get("/profile", (req,res) => {
+    if(req.session.userId){
+        User.findByPk(req.session.userId).then(userData => {
+            const hbsUser = userData.toJSON();
+            res.render("profile", {
+                user:hbsUser,
+                isSignedIn:req.session.userId
+            })
+        })
+    } else {
+        res.redirect("/login")
+    }
 })
 
 module.exports = router;

@@ -39,7 +39,7 @@ header{
     align-items: flex-end;
     flex-wrap: wrap;
     height: 100px;
-    opacity: 70%;
+    opacity: 80%;
     padding: 5px;
     box-shadow: 0px 5px 5px black;
 }
@@ -68,6 +68,7 @@ header h1{
 }
 
 #navMore a {
+    font-size: 60px;
     margin: 5px 20px;
 }
 
@@ -80,6 +81,16 @@ header h1{
 
 #moreI, #navMore a {
     cursor: pointer;
+}
+
+#more h2 {
+    display: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+#more i:hover h2{
+    display: block;
 }
 
 #searchBar {
@@ -175,7 +186,7 @@ img{
 
 #loginCard{
     background-color: var(--dark);
-    opacity: 70%;
+    opacity: 80%;
 }
 
 #loginCard h1{
@@ -203,6 +214,12 @@ img{
 }
 
 @media screen and (max-width: 923px) {
+    main {
+        padding-top: 16vw;
+    }
+    #more i:hover h2{
+        display: none;
+    }
     header {
         height: 15vw;
         align-items: flex-start;
@@ -244,6 +261,10 @@ img{
     #navMore{
         top: 15vw; 
         height: 100vh;
+    }
+    #navMore a {
+        font-size: 8vw;
+        margin: 5px 20px;
     }
     #indexRandom{
         flex-direction: column;
