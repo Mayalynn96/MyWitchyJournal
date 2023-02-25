@@ -135,7 +135,7 @@ h3{
     margin-left: 10px;
 }
 
-#randomCard{
+.randomCard{
     height: 500px;
 }
 
@@ -249,7 +249,7 @@ img{
         flex-direction: column;
         align-items: center;
     }
-    #randomCard{
+    .randomCard{
         width: 50%;
         height: auto;
     }
