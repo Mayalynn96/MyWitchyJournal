@@ -6,11 +6,23 @@
   }
   
 
-*{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
 }
+
+header label{
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+  }
 
 body{
     background-color: var(--background);
@@ -28,20 +40,65 @@ header{
     flex-wrap: wrap;
     height: 100px;
     opacity: 70%;
+    padding: 5px;
+    box-shadow: 0px 5px 5px black;
 }
 
 header h1{
     font-size: 70px;
-    padding: 5px;
-    width: 65%;
 }
 
-header div{
+#searchAndMore{
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    width: 35%;
+    flex-direction: row;
+    height: 100%;
+}
+
+#navMore{
+    display: flex;
+    flex-direction: column;
     font-size: 30px;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    background-color: var(--dark);
+    display: none;
+    box-shadow: -10px 0px 10px -7px black;
+}
+
+#navMore a {
+    margin: 5px 20px;
+}
+
+#more{
+    height: 100%;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+}
+
+#moreI, #navMore a {
+    cursor: pointer;
+}
+
+#searchBar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 25px;
+    padding: 5px;
+}
+
+#searchBar input, #searchBar button {
+    margin: 5px;
+    border-radius: 5px;
+    border: solid 1px var(--middleText);
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--dark);
+    color: #EFA9AE;
 }
 
 a{
@@ -118,6 +175,7 @@ img{
 
 #loginCard{
     background-color: var(--dark);
+    opacity: 70%;
 }
 
 #loginCard h1{
@@ -144,29 +202,49 @@ img{
     color: var(--dark);
 }
 
-@media screen and (max-width: 700px) {
-    header{
-        flex-direction: column;
-        text-align: center;
-        height: 32vw;
+@media screen and (max-width: 923px) {
+    header {
+        height: 15vw;
+        align-items: flex-start;
     }
-
-    header h1, header div{
-        width: 100%;
-    }
-
     header h1{
-        font-size: 15vw;
+        font-size: 10vw;
     }
-
-    header div{
-        font-size: 6vw;
+    #searchBar i, #more i {
+        font-size: 5vw;
+        cursor: pointer;
     }
-
-    main{
-        padding-top: 32vw;
+    #searchBar input, #searchBar button{
+        position: absolute;
+        font-size: 5vw;
+        padding: 5px;
+        top: 15vw;
     }
-
+    #searchBar input{
+        left: 10px;
+    }
+    #searchBar button{
+        right: 10px;
+    }
+    .hidden {
+        display: none;
+    }
+    .openSearchBar{
+        height: 30vw;
+    }
+    #searchAndMore{
+        margin-top: 10px;
+    }
+    #more, #searchBar, #more a{
+        display: flex;
+        align-items:flex-start;
+        padding-top: 0;
+        justify-content: center;
+    }
+    #navMore{
+        top: 15vw; 
+        height: 100vh;
+    }
     #indexRandom{
         flex-direction: column;
         align-items: center;
@@ -184,7 +262,7 @@ img{
     }
     
     #allCards img {
-        width: 60vw;
+        width: 35vw;
         height: auto;
     }
 }
