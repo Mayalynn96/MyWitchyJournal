@@ -505,11 +505,11 @@ const seed = async () => {
             "password": "password",
             "birthDateAndTime": null
         }
-    ],{
-        validate:true,
-        individualHooks:true
-      })
-      const decks = await Deck.bulkCreate([
+    ], {
+        validate: true,
+        individualHooks: true
+    })
+    const decks = await Deck.bulkCreate([
         {
             "name": "Rider-Waite",
             "description": "The Rider-Waite Tarot is a widely popular deck for tarot card reading. It is also known as the Waite-Smith, Rider-Waite-Smith, or Rider Tarot. Based on the instructions of academic and mystic A. E. Waite and illustrated by Pamela Colman Smith, both members of the Hermetic Order of the Golden Dawn, the cards were originally published by the Rider Company in 1909. The deck has been published in numerous editions and inspired a wide array of variants and imitations. It is estimated that more than 100 million copies of the deck exist in more than 20 countries.",
@@ -522,10 +522,10 @@ const seed = async () => {
             "isPrivate": false,
             "UserId": 1,
         }
-    ],{
-        validate:true
-      })
-      const images = await Image.bulkCreate([
+    ], {
+        validate: true
+    })
+    const images = await Image.bulkCreate([
         {
             "src": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
             "artist": "A.E. Waite and Pamela Colman Smith",
@@ -659,140 +659,140 @@ const seed = async () => {
             "DeckId": 1,
         },
         {
-            "src": "/images/tarotCards/majorArcana/00TheFool.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/00TheFool.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 1,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/01TheMagician.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/01TheMagician.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 2,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/02TheHighPriestess.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/02TheHighPriestess.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 3,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/03TheEmpress.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/03TheEmpress.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 4,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/04TheEmperor.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/04TheEmperor.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 5,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/05TheHierophant.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/05TheHierophant.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 6,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/06TheLovers.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/06TheLovers.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 7,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/07TheChariot.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/07TheChariot.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 8,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/08Strength.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/08Strength.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 9,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/09TheHermit.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/09TheHermit.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 10,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/10WheelOfFortune.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/10WheelOfFortune.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 11,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/11Justice.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/11Justice.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 12,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/12TheHangedMan.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/12TheHangedMan.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 13,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/13Death.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/13Death.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 14,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/14Temperance.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/14Temperance.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 15,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/15TheDevil.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/15TheDevil.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 16,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/16TheTower.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/16TheTower.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 17,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/17TheStar.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/17TheStar.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 18,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/18TheMoon.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/18TheMoon.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 19,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/19TheSun.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/19TheSun.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 20,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/20Judgement.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/20Judgement.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 21,
             "DeckId": 2,
         },
         {
-            "src": "/images/tarotCards/majorArcana/21TheWorld.png",
+            "src": "https://raw.githubusercontent.com/Mayalynn96/MyWitchyJournal/Dev/public/images/tarotCards/majorArcana/21TheWorld.png",
             "artist": "Maya Lynn Cohen",
             "CardId": 22,
             "DeckId": 2,
         }
-    ],{
-        validate:true
-      })
+    ], {
+        validate: true
+    })
     process.exit(1)
 }
 

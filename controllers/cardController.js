@@ -85,4 +85,23 @@ router.post("/", (req, res) => {
     })
 })
 
+router.get("/withDeck/:deckId", (req, res) => {
+    Card.findAll({
+        include: {
+            model:Image,
+            where:{
+                DeckId: req.params.deckId
+            }
+        }
+    }).then(data => {
+        res.json(data)
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({
+            msg: "an error occurred",
+            err: err
+        })
+    })
+})
+
 module.exports = router;
