@@ -124,9 +124,7 @@ router.get("/isValidToken", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-    User.findByPk(req.params.id, {
-        include: [Play],
-    })
+    User.findByPk(req.params.id)
         .then((userData) => {
             res.json(userData);
         })

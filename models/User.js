@@ -42,7 +42,8 @@ User.init({
     },
     profilePicture: {
         type: DataTypes.STRING,
-        allowNull:true
+        allowNull:false,
+        defaultValue:"https://cdn.discordapp.com/attachments/1054153893795348523/1089886725758787775/Beatiful-green-whitch.png"
     }
 },{
     sequelize,
