@@ -4,7 +4,7 @@ const {
     User,
     Card,
     Keyword,
-    Meaning,
+    UserCard,
     Image,
     Reading,
     Deck,
@@ -495,7 +495,8 @@ const seed = async () => {
             "email": "malyco11@gmail.com",
             "password": "password",
             "birthDateAndTime": null,
-            "isAdmin": true
+            "isAdmin": true,
+            "proilePicture": "https://media.discordapp.net/attachments/1054153893795348523/1089868865661583360/Beatiful-witch-Pink-Flowers.png?width=670&height=670"
         },
         {
             "firstName": "Bear",
@@ -503,7 +504,8 @@ const seed = async () => {
             "username": "CareBear",
             "email": "bear@gmail.com",
             "password": "password",
-            "birthDateAndTime": null
+            "birthDateAndTime": null,
+            "proilePicture": "https://media.discordapp.net/attachments/1054153893795348523/1089869016849449020/Bear-Boss.png?width=670&height=670"
         }
     ], {
         validate: true,

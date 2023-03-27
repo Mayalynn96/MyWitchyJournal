@@ -1,7 +1,7 @@
 const User = require('./User');
 const Card = require('./Card');
 const Keyword = require('./Keyword');
-const Meaning = require('./Meaning');
+const UserCard = require('./UserCard');
 const Image = require('./Image');
 const Reading = require('./Reading');
 const Deck = require('./Deck');
@@ -13,15 +13,6 @@ const PersonInReading = require('./PersonInReading');
 Card.hasMany(Keyword);
 Keyword.belongsTo(Card);
 
-User.hasMany(Keyword);
-Keyword.belongsTo(User);
-
-Card.hasMany(Meaning);
-Meaning.belongsTo(Card);
-
-User.hasMany(Meaning);
-Meaning.belongsTo(User);
-
 User.hasMany(Deck);
 Deck.belongsTo(User);
 
@@ -30,9 +21,6 @@ Image.belongsTo(Deck, {
     onDelete:"cascade"
 });
 
-Deck.hasMany(Reading);
-Reading.belongsTo(Deck);
-
 Image.belongsTo(Card);
 Card.hasMany(Image);
 
@@ -40,7 +28,7 @@ module.exports = {
     User,
     Card,
     Keyword,
-    Meaning,
+    UserCard,
     Image,
     Reading,
     Deck,

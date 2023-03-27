@@ -1,14 +1,14 @@
 const {Model, DataTypes} = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Meaning extends Model{}
+class UserCard extends Model{}
 
-Meaning.init({
-    upright:{
+UserCard.init({
+    meaning: {
         type: DataTypes.TEXT,
         allowNull:true
-    }, 
-    reversed:{
+    },
+    reveresedMeaning: {
         type: DataTypes.TEXT,
         allowNull:true
     }
@@ -16,4 +16,4 @@ Meaning.init({
     sequelize
 });
 
-module.exports=Meaning
+module.exports=UserCard

@@ -24,6 +24,14 @@ Card.init({
         validate: {
             isIn:[['Cups','Pentacles','Swords','Wands',null]]
         }
+    },
+    meaning: {
+        type: DataTypes.TEXT,
+        allowNull:true
+    },
+    reveresedMeaning: {
+        type: DataTypes.TEXT,
+        allowNull:true
     }
 },{
     sequelize

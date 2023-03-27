@@ -8,10 +8,6 @@ Keyword.init({
         type: DataTypes.STRING,
         allowNull:false,
         unique:true
-    },
-    forUpright:{
-        type: DataTypes.BOOLEAN,
-        defaultValue: true
     }
 },{
     sequelize

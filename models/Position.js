@@ -4,16 +4,12 @@ const sequelize = require("../config/connection");
 class Position extends Model{}
 
 Position.init({
-    name:{
+    position:{
         type: DataTypes.STRING,
-        allowNull:true
+        allowNull:false
     }, 
-    question:{
-        type: DataTypes.STRING,
-        allowNull:true
-    }, 
-    personalTakeOnCard:{
-        type: DataTypes.STRING,
+    personalInterpretation:{
+        type: DataTypes.TEXT,
         allowNull:true
     }
 },{

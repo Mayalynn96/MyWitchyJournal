@@ -5,7 +5,7 @@ const {
     User,
     Card,
     Keyword,
-    Meaning,
+    UserCard,
     Image,
     Reading,
     Deck,
@@ -43,11 +43,7 @@ router.get("/user/:username", (req, res) => {
 })
 
 router.post("/", (req, res) => {
-    User.create({
-        username: req.body.username,
-        password: req.body.password,
-        email: req.body.email,
-    })
+    User.create(req.body)
         .then((newUser) => {
             const token = jwt.sign(
                 {
@@ -56,7 +52,7 @@ router.post("/", (req, res) => {
                 },
                 process.env.JWT_SECRET,
                 {
-                    expiresIn: "6h",
+                    expiresIn: "12h",
                 }
             );
             res.json({
@@ -76,7 +72,7 @@ router.post("/login", (req, res) => {
             [Op.or]: [{ username: req.body.login }, [{ email: req.body.login }]],
         }
     }).then((foundUser) => {
-        //is email wrong?
+        //is login wrong?
         if (!foundUser) {
             return res.status(401).json({ msg: "invalid login credentials" });
         }

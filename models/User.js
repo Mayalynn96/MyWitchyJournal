@@ -39,6 +39,10 @@ User.init({
     isAdmin: {
         type: DataTypes.BOOLEAN,
         defaultValue:false
+    },
+    profilePicture: {
+        type: DataTypes.STRING,
+        allowNull:true
     }
 },{
     sequelize,
