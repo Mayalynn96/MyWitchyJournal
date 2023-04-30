@@ -1,7 +1,6 @@
 const User = require('./User');
 const Card = require('./Card');
 const Keyword = require('./Keyword');
-const UserCard = require('./UserCard');
 const Image = require('./Image');
 const Reading = require('./Reading');
 const Deck = require('./Deck');
@@ -31,19 +30,11 @@ Position.belongsTo(Reading)
 Position.belongsTo(Card)
 User.hasMany(Reading);
 
-// UserCard.belongsToMany(Reading, {
-//     through: Position
-// })
-
-Card.belongsToMany(User, {
-    through: UserCard
-})
 
 module.exports = {
     User,
     Card,
     Keyword,
-    UserCard,
     Image,
     Reading,
     Deck,

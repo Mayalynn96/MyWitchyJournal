@@ -16,7 +16,28 @@ const {
 
 const jwt = require("jsonwebtoken");
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+    const token = req.headers?.authorization?.split(" ")[1];
+    if (!token) {
+        return res.status(403).json({ msg: "you must be logged in to a Reading" });
+    }
+    try {
+        const tokenData = jwt.verify(token, process.env.JWT_SECRET);
+        
+        const userReadings = await Reading.findAll({
+            where: {
+                UserId: tokenData.id
+            },
+            include: [{model:Position, include: [Card]}]
+        })
+        res.json(userReadings)
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Error getting the current users readings." });
+    }
+})
+
+router.get("/all", (req, res) => {
     Reading.findAll().then(data => {
         res.json(data)
     }).catch(err => {

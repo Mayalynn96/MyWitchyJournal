@@ -12,7 +12,6 @@ const {
     Position,
     Person,
     PersonInReading,
-    KeywordConnector
 } = require('../models')
 
 router.get("/", (req, res) => {
@@ -76,14 +75,14 @@ router.get("/:id", (req, res) => {
 //     })
 // })
 
-router.post("/", (req, res) => {
-    Card.create(req.body).then(data => {
-        return res.status(201).send("Card added!")
-    }).catch(err => {
-        console.log(err);
-        return res.status(500).send("Something went wrong...")
-    })
-})
+// router.post("/", (req, res) => {
+//     Card.create(req.body).then(data => {
+//         return res.status(201).send("Card added!")
+//     }).catch(err => {
+//         console.log(err);
+//         return res.status(500).send("Something went wrong...")
+//     })
+// })
 
 router.get("/withDeck/:deckId", (req, res) => {
     Card.findAll({

@@ -8,6 +8,10 @@ Keyword.init({
         type: DataTypes.STRING,
         allowNull:false,
         unique:true
+    },
+    reversed: {
+        type: DataTypes.BOOLEAN,
+        defaultValue:false
     }
 },{
     sequelize
