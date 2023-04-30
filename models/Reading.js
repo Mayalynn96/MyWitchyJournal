@@ -6,11 +6,12 @@ class Reading extends Model{}
 Reading.init({
     readingDate:{
         type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
         allowNull:false
     },
     eventDate:{
         type: DataTypes.DATE,
-        allowNull:false
+        allowNull:true
     },
     question:{
         type: DataTypes.STRING,

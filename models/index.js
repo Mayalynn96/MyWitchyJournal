@@ -23,6 +23,21 @@ Image.belongsTo(Deck, {
 
 Image.belongsTo(Card);
 Card.hasMany(Image);
+Card.hasMany(Position)
+
+Reading.belongsTo(User);
+Reading.hasMany(Position)
+Position.belongsTo(Reading)
+Position.belongsTo(Card)
+User.hasMany(Reading);
+
+// UserCard.belongsToMany(Reading, {
+//     through: Position
+// })
+
+Card.belongsToMany(User, {
+    through: UserCard
+})
 
 module.exports = {
     User,
