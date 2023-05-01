@@ -26,7 +26,9 @@ Card.hasMany(Position)
 
 Reading.belongsTo(User);
 Reading.hasMany(Position)
-Position.belongsTo(Reading)
+Position.belongsTo(Reading, {
+    onDelete:"cascade"
+})
 Position.belongsTo(Card)
 User.hasMany(Reading);
 
