@@ -11,6 +11,10 @@ Position.init({
     personalInterpretation:{
         type: DataTypes.TEXT,
         allowNull:true
+    },
+    isReversed:{
+        type: DataTypes.BOOLEAN,
+        defaultValue:false
     }
 },{
     sequelize

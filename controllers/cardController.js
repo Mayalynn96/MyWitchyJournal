@@ -15,7 +15,7 @@ const {
 } = require('../models')
 
 router.get("/", (req, res) => {
-    Card.findAll().then(data => {
+    Card.findAll({attributes: ["id", "cardName", "cardNumber"]}).then(data => {
         res.json(data)
     }).catch(err => {
         console.log(err);
@@ -31,13 +31,6 @@ router.get("/userCards", (req, res) => {
         include: [
             {
                 model: Keyword,
-                where: {
-                    userId: req.session.userId
-                },
-                required:false
-            },
-            {
-                model: Meaning,
                 where: {
                     userId: req.session.userId
                 },
