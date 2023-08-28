@@ -47,6 +47,7 @@ router.get("/", async (req, res) => {
 
 router.get("/all", (req, res) => {
     Reading.findAll().then(data => {
+        
         res.json(data)
     }).catch(err => {
         console.log(err);
@@ -96,7 +97,7 @@ router.post("/", async (req, res) => {
             })
         })
 
-        res.json({ msg: 'Reading successfully added!' })
+        res.json({ msg: 'Reading successfully added!'})
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: "Error adding your Reading." });
